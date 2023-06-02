@@ -9,10 +9,12 @@ func IntPtr(i int) *int {
 func Obj2IntegerBatch(objList []any) []*int {
 	integerArr := []*int{}
 	for _, obj := range objList {
+		var num int
 		if obj == nil {
 			integerArr = append(integerArr, nil)
 		} else {
-			integerArr = append(integerArr, obj.(*int))
+			num = obj.(int)
+			integerArr = append(integerArr, &num)
 		}
 	}
 	return integerArr
