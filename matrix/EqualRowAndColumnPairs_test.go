@@ -31,6 +31,9 @@ func Test_equalPairs(t *testing.T) {
 			if got := equalPairs(tt.args.grid); got != tt.want {
 				t.Errorf("equalPairs() = %v, want %v", got, tt.want)
 			}
+			if got := equalPairsWithMap(tt.args.grid); got != tt.want {
+				t.Errorf("equalPairs() = %v, want %v", got, tt.want)
+			}
 		})
 	}
 }
