@@ -38,6 +38,9 @@ func Test_minimizedStringLength(t *testing.T) {
 			if got := minimizedStringLength(tt.args.s); got != tt.want {
 				t.Errorf("minimizedStringLength() = %v, want %v", got, tt.want)
 			}
+			if got := minimizedStringLengthBit(tt.args.s); got != tt.want {
+				t.Errorf("minimizedStringLengthBit() = %v, want %v", got, tt.want)
+			}
 		})
 	}
 }
