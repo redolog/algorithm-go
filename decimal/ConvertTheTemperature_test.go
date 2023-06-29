@@ -1,7 +1,7 @@
 package decimal
 
 import (
-	"reflect"
+	"algorithm-go/util"
 	"testing"
 )
 
@@ -31,7 +31,7 @@ func Test_convertTemperature(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := convertTemperature(tt.args.celsius); !reflect.DeepEqual(got, tt.want) {
+			if got := convertTemperature(tt.args.celsius); !util.DeepEquals(got, tt.want, 1e-5) {
 				t.Errorf("convertTemperature() = %v, want %v", got, tt.want)
 			}
 		})
