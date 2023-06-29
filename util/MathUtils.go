@@ -1,5 +1,7 @@
 package util
 
+import "math"
+
 // 输入int数值，返回数值对应指针
 func IntPtr(i int) *int {
 	return &i
@@ -18,4 +20,9 @@ func Obj2IntegerBatch(objList []any) []*int {
 		}
 	}
 	return integerArr
+}
+
+func Equals(f1, f2, errorRange float64) bool {
+	diff := math.Abs(f1 - f2)
+	return diff < errorRange
 }
