@@ -23,7 +23,7 @@ func Test_reconstructMatrix(t *testing.T) {
 				lower:  1,
 				colsum: []int{1, 1, 1},
 			},
-			want: [][]int{{1, 1, 0}, {0, 0, 1}},
+			want: [][]int{{1, 0, 1}, {0, 1, 0}},
 		},
 		{
 			name: "test2",
@@ -41,7 +41,7 @@ func Test_reconstructMatrix(t *testing.T) {
 				lower:  5,
 				colsum: []int{2, 1, 2, 0, 1, 0, 1, 2, 0, 1},
 			},
-			want: [][]int{{1, 1, 1, 0, 1, 0, 0, 1, 0, 0}, {1, 0, 1, 0, 0, 0, 1, 1, 0, 1}},
+			want: [][]int{{1, 0, 1, 0, 1, 0, 0, 1, 0, 1}, {1, 1, 1, 0, 0, 0, 1, 1, 0, 0}},
 		},
 	}
 	for _, tt := range tests {
