@@ -41,9 +41,9 @@ func Test_reverseList(t *testing.T) {
 			if got := reverseListWithTraverse(tt.args.head); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("reverseListWithTraverse() = %v, want %v", got, tt.want)
 			}
-			//if got := reverseListWithRecurse(tt.args.head); !reflect.DeepEqual(got, tt.want) {
-			//	t.Errorf("reverseListWithTraverse() = %v, want %v", got, tt.want)
-			//}
+			if got := reverseListWithRecurse(tt.args.head); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("reverseListWithRecurse() = %v, want %v", got, tt.want)
+			}
 		})
 	}
 }
