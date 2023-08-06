@@ -32,6 +32,9 @@ func Test_alternateDigitSum(t *testing.T) {
 			if got := alternateDigitSum(tt.args.n); got != tt.want {
 				t.Errorf("alternateDigitSum() = %v, want %v", got, tt.want)
 			}
+			if got := alternateDigitSum2(tt.args.n); got != tt.want {
+				t.Errorf("alternateDigitSum2() = %v, want %v", got, tt.want)
+			}
 		})
 	}
 }
